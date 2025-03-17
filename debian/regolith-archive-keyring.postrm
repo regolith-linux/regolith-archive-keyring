@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "purge" ]; then
+    # Remove the symlink
+    rm -f /etc/apt/trusted.gpg.d/regolith-archive-keyring.gpg
+fi
+
+#DEBHELPER#
