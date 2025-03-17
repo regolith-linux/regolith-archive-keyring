@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+	# Install the symlink upon first installation
+	ln -sf /usr/share/keyrings/regolith-archive-keyring.gpg \
+	       /etc/apt/trusted.gpg.d/regolith-archive-keyring.gpg
+	echo "Installed regolith-archive-keyring as a trusted APT keyring."
+    ;;
+esac
+
+#DEBHELPER#
